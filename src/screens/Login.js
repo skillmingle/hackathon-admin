@@ -84,8 +84,10 @@ const Login = () => {
         <button type="submit">Login</button>
         <p>Don't have an account? <Link to="/Signup">Signup</Link></p>
       </form>
-      <button onClick={driveAuth}>Google Drive Authentication</button>
-      {accessToken}
+      <div style={{display:'block'}}>
+        <button onClick={driveAuth}>Google Drive Authentication</button>
+        {accessToken}
+      </div>
     </div>
   );
 };
