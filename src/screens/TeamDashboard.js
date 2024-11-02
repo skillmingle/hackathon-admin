@@ -19,7 +19,7 @@ const TeamDashboard = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/teams/${teamId}/tasks`);
+      const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/teams/${teamId}/tasks`);
       const data = await response.json();
       if (data.success) {
         setTasks(data.tasks);
@@ -43,7 +43,7 @@ const TeamDashboard = () => {
   useEffect(() => {
     const fetchTeam = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/teams/${teamId}`);
+        const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/teams/${teamId}`);
         const data = await response.json();
 
         if (data.success) {
@@ -64,7 +64,7 @@ const TeamDashboard = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/teams/${teamId}/addMember`, {
+      const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/teams/${teamId}/addMember`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: newMemberEmail }), // Assuming we add by email and find user in backend

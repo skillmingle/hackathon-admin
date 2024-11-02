@@ -16,7 +16,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/signup', {
+      const res = await fetch('https://h2h-backend-7ots.onrender.com/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

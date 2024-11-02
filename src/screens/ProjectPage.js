@@ -19,7 +19,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/projects/${projectId}`);
+        const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/projects/${projectId}`);
         const data = await response.json();
 
         if (data.success) {
@@ -27,7 +27,7 @@ const ProjectPage = () => {
         }
 
         // Fetch Teams for the Project
-        const teamResponse = await fetch(`http://localhost:5000/api/projects/${projectId}/teams`);
+        const teamResponse = await fetch(`https://h2h-backend-7ots.onrender.com/api/projects/${projectId}/teams`);
         const teamData = await teamResponse.json();
         if (teamData.success) {
           setTeams(teamData.teams);
@@ -52,7 +52,7 @@ const ProjectPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/projects/${projectId}/teams`, {
+      const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/projects/${projectId}/teams`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

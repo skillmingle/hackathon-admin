@@ -20,7 +20,7 @@ const CreateNotice = ({projectId, teams }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/notices", {
+      const response = await axios.post("https://h2h-backend-7ots.onrender.com/api/notices", {
         title,
         description,
         selectedTeams,
