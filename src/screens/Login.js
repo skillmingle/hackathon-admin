@@ -69,9 +69,9 @@ const Login = () => {
       console.log(tokenResponse.access_token)
       handleSaveToken(tokenResponse.access_token)
     },
-    onError: () => alert("Failed to refresh token, please login again"),
+    onError: (e) => console.log("Failed to refresh token, please login again",e),
     scope: "https://www.googleapis.com/auth/drive.file",
-    prompt: "none",
+    prompt: "consent",
   });
 
   return (
