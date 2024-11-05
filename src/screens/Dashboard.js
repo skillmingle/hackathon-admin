@@ -23,7 +23,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/user-projects/${user.id}`);
+        const response = await fetch(`https://h2h-backend-7ots.onrender.com/api/user-projects}`);
         const data = await response.json();
         
         if (data.success) {
