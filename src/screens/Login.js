@@ -66,12 +66,13 @@ const Login = () => {
   const driveAuth = useGoogleLogin({
     onSuccess: (tokenResponse) => {
       setAccessToken(tokenResponse.access_token);
-      console.log(tokenResponse.access_token)
-      handleSaveToken(tokenResponse.access_token)
+      console.log(tokenResponse.access_token);
+      handleSaveToken(tokenResponse.access_token);
     },
-    onError: (e) => console.log("Failed to refresh token, please login again",e),
-    scope: "https://www.googleapis.com/auth/drive.file"
+    onError: (e) => console.log("Failed to refresh token, please login again", e),
+    scope: "https://www.googleapis.com/auth/drive",
   });
+  
 
   return (
     <div className="auth-container">
